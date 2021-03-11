@@ -1,11 +1,12 @@
 import './App.css';
-import RegistrForm from './components/RegistrForm/RegistrForm'
 import React from "react";
+import {Route} from 'react-router-dom';
+import LoginPage from "./components/LoginPage/LoginPage";
 
-const App = () => {
+const App = (props) => {
     return (
         <div className="App">
-            <RegistrForm />
+            <Route path='/' render={() =>  <LoginPage store={props.store}/> }/>
         </div>
     );
 }
