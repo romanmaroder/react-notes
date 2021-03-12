@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import classNames from 'classnames/bind';
 import style from './LoginPage.module.css';
-import SignIn from "./SignIn/SignIn";
-import SignUp from "./SignUp/SignUp";
 import LeftPanel from "./LeftPanel/LeftPanel";
 import RightPanel from "./RightPanel/RightPanel";
+import AuthContainer from "./Auth/AuthContainer";
+import RegistrationContainer from "./Registration/RegistrationContainer";
 
 let styles = classNames.bind(style);
 
@@ -25,8 +25,8 @@ const LoginPage = () => {
         <div className={container}>
             <div className={style.forms_container}>
                 <div className={style.signin_signup}>
-                    <SignIn />
-                    <SignUp />
+                    <AuthContainer/>
+                    <RegistrationContainer />
                 </div>
             </div>
             <div className={style.panels_container}>
