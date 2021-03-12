@@ -45,7 +45,7 @@ const Registration = (props) => {
             />
             <p className={style.social_text}> Or Sign up social platforms</p>
             <div className={style.social_media}>
-                <a href="#" className={style.social_icon}>
+                <a href="#1" className={style.social_icon}>
                     <i className="fab fa-facebook-f"/>
                 </a>
                 <a href="#" className={style.social_icon}>
