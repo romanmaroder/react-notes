@@ -1,5 +1,9 @@
+
 .App {
-  max-width: 1280px;
-  padding: 0 15px;
-  margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
 }

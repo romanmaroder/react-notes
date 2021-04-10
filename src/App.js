@@ -1,12 +1,20 @@
 import './App.css';
-import RegistrForm from './components/RegistrForm/RegistrForm'
-import React from "react";
+import React from 'react';
+import {Route} from 'react-router-dom';
+import LoginPage from './components/LoginPage/LoginPage';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import rootReducer from './store/reducers';
+
+const store = createStore(rootReducer);
 
 const App = () => {
     return (
-        <div className="App">
-            <RegistrForm />
-        </div>
+        <Provider store={store}>
+            <div className="App">
+                <Route path='/' render={() => <LoginPage/>}/>
+            </div>
+        </Provider>
     );
 }
 
