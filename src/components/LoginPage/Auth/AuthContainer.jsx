@@ -4,12 +4,15 @@ import Auth from "./Auth";
 import {setUsernameText, setPasswordText} from "../../../store/auth/actions";
 
 
-const AuthContainer = (props) => {
-    return (
-        <Auth username={props.username} password={props.password} setUsernameText={props.setUsernameText}
-              setPasswordText={props.setPasswordText}/>
-    );
-};
+class AuthContainer extends React.Component {
+    render() {
+        return  (
+            <Auth username={this.props.username} password={this.props.password} setUsernameText={this.props.setUsernameText}
+              setPasswordText={this.props.setPasswordText}/>
+              )
+
+    }
+}
 
 const mapStateToProps = (state) => {
     return {

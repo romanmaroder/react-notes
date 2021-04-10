@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../LoginPage.module.css';
-
+import imgAuth from  '../../../assets/img/authentication.svg';
 const LeftPanel = (props) => {
 
     return (
@@ -20,7 +20,7 @@ const LeftPanel = (props) => {
                 </button>
             </div>
             <img
-                src="img/authentication.svg"
+                src={imgAuth}
                 className={style.image}
                 alt="authentication"
             />

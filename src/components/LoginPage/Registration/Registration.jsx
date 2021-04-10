@@ -13,14 +13,16 @@ const Registration = (props) => {
         props.setPasswordText(event.target.value)
     }
 
+
     return (
 
-        <form action="" className={style.sign_up_form}>
+        <form action="" className={style.sign_up_form} >
             <h2 className={style.title}>Sign up</h2>
             <div className={style.input_field}>
                 <i className="fas fa-user"/>
                 <input type="text"
                        placeholder="Username"
+                       name="username"
                        value={props.username}
                        onChange={onUsernameChange}/>
             </div>
@@ -28,6 +30,7 @@ const Registration = (props) => {
                 <i className="fas fa-envelope"/>
                 <input type="email"
                        placeholder="E-mail"
+                       name="email"
                        value={props.email}
                        onChange={onEmailChange}/>
             </div>
@@ -35,6 +38,7 @@ const Registration = (props) => {
                 <i className="fas fa-lock"/>
                 <input type="password"
                        placeholder="Password"
+                       name="password"
                        value={props.password}
                        onChange={onPasswordChange}/>
             </div>
@@ -42,6 +46,7 @@ const Registration = (props) => {
                 type="submit"
                 value="Sign up"
                 className={`${style.btn} ${style.solid}`}
+                onClick= { ()=>{props.onSignUp()} }
             />
             <p className={style.social_text}> Or Sign up social platforms</p>
             <div className={style.social_media}>

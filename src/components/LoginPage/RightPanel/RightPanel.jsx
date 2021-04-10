@@ -1,5 +1,6 @@
 import React from 'react';
 import style from '../LoginPage.module.css';
+import imgRegistration from  '../../../assets/img/sign_in.svg';
 
 const RightPanel = (props) => {
 
@@ -19,7 +20,7 @@ const RightPanel = (props) => {
                     Sign in
                 </button>
             </div>
-            <img src="img/sign_in.svg" className={style.image} alt="sign in"/>
+            <img src={imgRegistration} className={style.image} alt="sign in"/>
         </div>
     );
 }
