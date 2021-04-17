@@ -6,7 +6,7 @@ const defaultState = {
 };
 
 export const authReducer = (state = defaultState, action) => {
-    console.log(state)
+    // console.log(state)
     switch (action.type) {
         case AUTH_CHANGE_USERNAME_TEXT:
             return {

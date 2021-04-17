@@ -2,11 +2,12 @@ import './App.css';
 import React from 'react';
 import {Route} from 'react-router-dom';
 import LoginPage from './components/LoginPage/LoginPage';
-import {createStore} from 'redux';
+import {createStore,applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import rootReducer from './store/reducers';
+import {rootReducers} from './store/reducers';
+import thunk from 'redux-thunk';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducers,applyMiddleware(thunk));
 
 const App = () => {
     return (
